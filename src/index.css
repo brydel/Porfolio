@@ -1,0 +1,104 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Palette de couleurs */
+:root {
+  --primary-color: #0FC2C0; /* Vert technologique */
+  --secondary-color: #023C59; /* Bleu profond */
+  --accent-color-1: #1F7AFF; /* Bleu électrique */
+  --accent-color-2: #2DFE54; /* Vert lumineux */
+  --background-color: #015958; /* Fond principal */
+  --text-color-primary: #F2F5F9; /* Blanc cassé pour le texte principal */
+  --text-color-secondary: #A9B2C3; /* Gris métal pour le texte secondaire */
+}
+
+/* Corps de la page */
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace; /* Police technique */
+  background-color: var(--background-color);
+  color: var(--text-color-primary);
+  position:sticky; 
+}
+
+/* Liens */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color-1);
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'VT323', monospace; /* Style rétro pour les titres */
+  color: var(--text-color-primary);
+}
+
+/* Boutons */
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color-primary);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-color-1);
+}
+
+/* Boîtes */
+.box {
+  background-color: var(--secondary-color);
+  color: var(--text-color-primary);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajoutez une animation de pulsation pour le logo */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s infinite;
+}
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* S'assure que les particules restent en arrière-plan */
+}
+
+@keyframes pulse-connection {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+#hero {
+  padding-top: 6rem; /* Ajuste selon la hauteur de la navbar */
+}
+
