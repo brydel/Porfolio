@@ -9,7 +9,7 @@ function Hero() {
       <div
         className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10 pointer-events-none transition-transform duration-500 hover:opacity-50 hover:scale-110"
         style={{
-          backgroundImage: "url('/src/assets/certfif1.png')", // Remplacez par le chemin correct
+          backgroundImage: "url('/certfif1.png')", // Remplacez par le chemin correct
           backgroundSize: "60%",
           backgroundPosition: "center top",
         }}
